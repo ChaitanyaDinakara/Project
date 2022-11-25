@@ -1,0 +1,47 @@
+﻿@page
+@model netCore.Pages.Edit_SalesModel
+@{
+}
+
+<h1 style="color:black"><b>Edit order details </b></h1>
+<form method="post">
+
+    <div class="row-cols-1">
+        <label class="col-form-label"> Customer id  </label>
+        <div>
+            <input type="number" class=" form-control" name="id" value="@Model.update.customer_id" required></input>
+        </div>
+        <label class="col-form-label"> Name  </label>
+        <div>
+            <input type="text" class=" form-control" name="name" value="@Model.update.name" required></input>
+        </div>
+        <label class="col-form-label"> Product id  </label>
+        <div>
+            <input type="text" class=" form-control" name="product_id" placeholder="Valid code starts with AB and PQ" value="@Model.update.product_id" required></input>
+        </div>
+        <label class="col-form-label"> Date  </label>
+        <div>
+            <input type="datetime" class=" form-control" name="date" value="@Model.update.orderdate" required></input>
+        </div>
+        <label class="col-form-label"> Amount  </label>
+        <div>
+            <input type="text" class=" form-control" name="amount" value="@Model.update.amount" required></input>
+        </div>
+        <label class="col-form-label"> Address  </label>
+        <div>
+            <input type="text" class=" form-control" name="address" value="@Model.update.address" required></input>
+        </div>
+        <label class="col-form-label"> Phone </label>
+        <div>
+            <input type="number" class=" form-control" name="phone" value="@Model.update.phone" required></input>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-success">Update</button>
+            <a href="/sales" type="reset" class="btn btn-danger">Cancel</a>
+        </div>
+    </div>
+</form>
+
+
